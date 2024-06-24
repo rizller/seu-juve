@@ -1,0 +1,479 @@
+
+//container de alinhamento do layout. Aonde usar essa classe, alinha o conteúdo. Mantém centralizado, independente do tamanho
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+
+
+//BG Home
+
+.bg-home{
+    position: relative;
+    overflow: hidden;
+}
+
+//pseudo elemento, antes do nosso conteúdo
+.bg-home::before{
+    content: '';
+    display: block;
+    position: absolute;
+    background-image:  url("../assets/bg.png");
+    left:0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; //fica uma camada abaixo dos elementos da tela
+    background-size: cover; //tentar pegar o tamanho inteiro na tela, sem quebrar
+    background-repeat: no-repeat; 
+    background-position: 50% 0; 
+    
+}
+
+.hero{
+    color: $black-dark;
+    min-height: 80vh; //80% do tamanho do view high.
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+    h1{
+        text-align: center;
+        line-height: 150%;
+        max-width: 740px;
+        font-size: 50px;
+    }
+
+}
+
+/** ABOUT  **/
+.about{
+    i{
+        margin: 0;
+    }
+}
+
+.about-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 34px 14px 64px 14px;
+    overflow: hidden;
+
+    img{
+        max-width: 570px;
+        min-width: 350px;
+    }
+}
+
+
+.section-separator-down{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background-image: url("../assets/separator-section-down.png");
+    background-repeat: no-repeat; 
+    background-size: 100% 100%;
+    margin: 0 auto;
+}
+
+.section-separator-up{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background-image: url("../assets/separator-section-up.png");
+    background-repeat: no-repeat; 
+    background-size: 100% 100%;
+    margin: 0 auto;
+}
+
+.about-description{
+    p{
+        margin-bottom: 25px;
+        line-height: 150%;
+        font-size: 20px;
+        text-align: justify;
+       }
+}
+
+.about-button{
+    border: 1px solid $white-normal;
+    line-height: 80px;
+    padding: 15px 50px;
+    border-radius: 30px;
+    color: $white-normal;
+    background-color: #00a884;
+    font-size: 18px;
+    transition: background-color 0.8s;//transição do hover para não mudar a cor do botão de uma vez
+}
+
+//muda a cor do botão quando passar mouse em cima
+.about-button:hover{
+    border: 1px solid #1ce7bc;
+    background-color: #1ce7bc;
+    color: $black-normal;   
+    -webkit-text-stroke-width: 0.1px; /* largura da borda */
+    -webkit-text-stroke-color: $black-normal; /* cor da borda */
+}
+
+
+
+
+
+
+/** END ABOUT **/
+
+/** BEGIN WHY QUIRO **/
+
+.why-quiro-and-testimony-content{
+    h2{
+        text-align: center;
+        font-size: 30px;
+    }
+}
+
+.quiro-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 75px 44px 34px 44px;
+    
+}
+
+.quiro-item{
+    flex: 1; //cada div tenta ocupar o tamanho igual na tela
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    img{
+        width: 144px;
+        transition: transform 0.2s;
+        min-height: 160px;
+        object-fit: cover; // Adicionado para manter a proporção da imagem
+    }
+
+    img:hover{
+        transform: scale(1.2);
+    }
+}
+
+.quiro-info{
+    margin-top: 20px;
+    font-size: 19px;
+}
+
+/** END WHY QUIRO **/
+
+/** BEGIN TESTIMONY **/
+
+.stars{
+    color: gold;
+    text-align: center;
+}
+
+.testimonial {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 0px 80px 0px;
+    min-height: 600px;
+}
+
+.testimonial p {
+    text-align: center;
+    font-size: 18px;
+    max-width: 1000px;
+    line-height: 250%;
+    order: 2;
+}
+
+.prev, .next {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 70px;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    transition: color 0.8s;
+    line-height: 50px;
+    
+}
+
+.prev:hover, .next:hover {
+    color: $blue-logo;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.prev {
+     order: 1; 
+     padding-left:100px;
+}
+
+.next { 
+     order: 3; 
+     padding-right:100px;
+}
+
+
+@keyframes flipLeft {
+    0% {
+        transform: rotateY(90deg);
+        opacity: 0;
+    }
+    100% {
+        transform: rotateY(0);
+        opacity: 1;
+    }
+}
+
+.flip-left-animation {
+    animation: flipLeft 1s forwards;
+}
+
+/** END TESTIMONY **/
+
+/** BEGIN COME TO MEET **/
+
+#map{
+    margin-top: 40px;
+    border: 0;
+}
+
+/** END COME TO MEET **/
+
+/**BEGIN FOOTER **/
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 0; //54px em cima e embaixo e 0 na direita / esquerda
+    gap:24px;
+    color: $black-dark; 
+ }
+ 
+
+
+.footer-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+}
+
+.footer-icons{
+    display: flex;
+    gap: 14px;
+    padding-top: 20px;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    z-index: 1000;
+    font-size: 24px;
+    border: none;
+    outline: none;
+    background-color: $white-normal; 
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+    opacity: 0;  /* inicialmente transparente */
+    visibility: hidden; /* inicialmente invisível */
+    transition: opacity 0.3s, visibility 0.3s, background-color 0.3s; /* combinação das transições */
+}
+
+.back-to-top:hover {
+    background-color: $blue-logo;
+    color: $white-light;
+    transition: background-color 0.3s;
+    i{
+        color:$white-light
+    }
+}
+
+.footer-icons a:hover{
+    i{
+        color:$blue-logo;
+        animation: translateY 0.8s infinite alternate;
+    }
+}
+
+/**END FOOTER **/
+
+/** BEGIN BUTTON WHATS APP **/
+.btn-whatsapp{
+    position: fixed;
+    bottom: 84px;
+    right: 24px;
+    z-index: 99; //vai ficar fluando em cima de todos os objetos
+    visibility: hidden;
+
+    img{
+        max-width: 74px;
+        transition: transform 0.4s; //tempo de transição do transform (efeito ícone)
+    }
+
+    img:hover{
+        transform: scale(1.1); //aumenta botão ao colocar o mouse em cima
+    }
+}
+
+.btn-whatsapp .tooltip-text{
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    top: 8px;
+    left: -144px;
+    background-color: $white-normal;
+    color: $black-normal;
+    padding: 6px;
+    border: 1px solid black;
+    border-radius: 8px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+
+}
+
+.btn-whatsapp:hover .tooltip-text{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/**END BUTTON WHAT'S APP **/
+
+
+/* Estilos para dispositivos tablets */
+@media (max-width: 1100px) {
+    .btn-whatsapp{
+        bottom: 94px;
+    }
+
+    .back-to-top{
+        padding: 0px 8px 10px 8px;
+        i{
+            font-size: 30px;
+        }
+    }
+}
+
+
+//formtação para celulares
+@media screen and (max-width: 768px){
+    .hero{
+        min-height: 61.2vh;
+        h1{
+            font-size: 34px;
+            padding: 0 14px;
+            width: 100%;
+        }
+    }
+
+    .about-content{
+        flex-direction: column;
+        text-align: center;
+
+        img{
+            max-width: 320px;
+            min-width: 250px;
+        }
+    }
+
+    .bg-home::before{
+        height: 70vh;
+    }
+
+    .section-separator-down{
+        height: 90px;
+    }
+    .section-separator-up{
+        height: 90px;
+    }
+
+    .about-description{
+        p{
+            font-size: 18px;
+           }
+    }
+
+    .why-quiro-and-testimony-content{
+        h2{
+            font-size: 25px;
+        }
+    }
+
+    .quiro-items{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .quiro-item{
+        img{
+            width: 104px;
+            min-height: 120px;
+            object-fit: cover; // Adicionado para manter a proporção da imagem
+        }
+    }
+
+    .quiro-info{
+        font-size: 16px;
+    }
+
+    .testimonial p {
+        font-size: 16px;
+        line-height: 150%;
+        padding: 0 20px 0 20px;
+
+    }
+
+    .prev, .next {
+        font-size: 50px;
+        line-height: 200px;
+    }
+    
+    .prev {
+        padding-left:5px;
+   }
+   
+   .next { 
+        padding-right:5px;
+   }
+
+    .testimonial {
+        padding: 30px 0px 30px 0px;
+        min-height: 525px;
+    }
+    .footer{
+        font-size: 14px;
+        text-align: center;
+        
+    }
+
+    .footer-logo{
+        width: 200px;
+    }
+
+    .back-to-top{
+        i{
+            font-size: 28px;
+        }
+        
+    }
+    .btn-whatsapp{
+        img{
+            max-width: 64px;
+        }
+        bottom: 84px;
+    }
+} 

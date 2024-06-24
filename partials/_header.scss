@@ -1,0 +1,139 @@
+header{
+    width: 100%;
+}
+
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; //espaça o item dentro do nav, entre eles (entre as divs, cada item fica num canto)
+}
+
+i{
+    color: $black-normal;
+}
+
+.header-icons{
+    display: flex;
+    gap: 14px;
+    padding: 30px;
+}
+
+//muda a cor dos ícones deader-icons quando passa o mouse em cima dos links da tag a
+.header-icons a:hover{
+    i{
+        color:$blue-logo;
+        animation: translateY 0.8s infinite alternate;
+    }
+}
+
+//animação para que o ícone 'suba' e aumente um pouco de tamanho quando passar o mouse em cima
+@keyframes translateY {
+    from{
+        transform: translateY(0) scale(1);
+    }
+    to{
+        transform: translateY(-8px) scale(1.1);
+    }
+}
+
+
+.header-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14px;
+    width: 300px;
+    min-width: 250px;
+}
+
+.header-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center; //centralizar itens verticalmente
+    justify-content: center; //centraliza itens horizontalmente
+    font-size: 18px;
+    
+
+    ul{
+        display: flex;
+        list-style: none;
+        padding: 0;
+    }
+
+    a{
+        text-decoration: none;
+        color: #333;
+        margin-left: 10px; /* Espaço entre os ícones */
+        font-weight: bold;
+    }
+
+    a:hover{
+       color:$blue-logo;
+    }    
+}
+
+.separator{
+    display: flex;
+    background-image: url("../assets/separator.png");
+    background-repeat: no-repeat; 
+    background-size: contain;/* Ajusta o tamanho da imagem de fundo para preencher o elemento */
+    margin: 0 8px 0px 15px; /* Adiciona margem ao redor do separador */
+    left:0;
+    top: 0;
+    width: 15px;
+    height: 20px;
+}
+
+
+/* Estilos para dispositivos tablets  */
+@media (max-width: 1100px) {
+    .header-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    //aplica o estilo na imagem dentro do header logo
+    .header-logo img{
+        width: 260px;
+        margin-top: 46px;
+    }
+
+    i{
+        margin-top: 16px;
+        font-size: 44px;
+    }
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .header-menu ul {
+        display: none; /* Oculta o menu no início */
+    }
+
+    .mobile-menu-button {
+        display: block; /* Mostra o ícone do menu */
+    }
+
+    /* Outros estilos de layout responsivo para o menu móvel */
+
+    .header-content{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    //aplica o estilo na imagem dentro do header logo
+    .header-logo img{
+        width: 250px;
+        margin-top: 46px;
+    }
+
+    i{
+        margin-top: 16px;
+        font-size: 34px;
+    }
+}
