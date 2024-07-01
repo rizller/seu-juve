@@ -12,6 +12,7 @@ html {
 
 header {
   width: 100%;
+  background-color: #104064;
 }
 
 .header-content {
@@ -21,7 +22,7 @@ header {
 }
 
 i {
-  color: #232224;
+  color: white;
 }
 
 .header-icons {
@@ -31,7 +32,7 @@ i {
 }
 
 .header-icons a:hover i {
-  color: #01c2d4;
+  color: #F0DAB5;
   animation: translateY 0.8s infinite alternate;
 }
 
@@ -64,14 +65,20 @@ i {
   list-style: none;
   padding: 0;
 }
+.header-menu li {
+  display: flex;
+  align-items: center;
+}
 .header-menu a {
   text-decoration: none;
-  color: #333;
-  margin-left: 10px; /* Espaço entre os ícones */
+  color: #FAF9F6;
+  margin: 0; /* Espaço entre os ícones */
+  padding: 0;
   font-weight: bold;
+  white-space: nowrap;
 }
 .header-menu a:hover {
-  color: #01c2d4;
+  color: #F0DAB5;
 }
 
 .separator {
@@ -79,11 +86,11 @@ i {
   background-image: url("../assets/separator.png");
   background-repeat: no-repeat;
   background-size: contain; /* Ajusta o tamanho da imagem de fundo para preencher o elemento */
-  margin: 0 8px 0px 15px; /* Adiciona margem ao redor do separador */
+  margin: 0 0px 0px 15px; /* Adiciona margem ao redor do separador */
   left: 0;
   top: 0;
-  width: 15px;
-  height: 20px;
+  width: 35px;
+  height: 30px;
 }
 
 /* Estilos para dispositivos tablets  */
@@ -154,8 +161,9 @@ i {
 }
 
 .hero {
-  color: #161617;
-  min-height: 80vh;
+  font-family: "Suez One";
+  color: #FFF;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -165,8 +173,9 @@ i {
 .hero h1 {
   text-align: center;
   line-height: 150%;
-  max-width: 740px;
+  max-width: 840px;
   font-size: 50px;
+  font-weight: normal;
 }
 
 /** ABOUT  **/
@@ -305,7 +314,7 @@ i {
 }
 
 .prev:hover, .next:hover {
-  color: #01c2d4;
+  color: #104064;
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
@@ -384,16 +393,16 @@ i {
 }
 
 .back-to-top:hover {
-  background-color: #01c2d4;
-  color: #fefbff;
+  background-color: #104064;
+  color: #FAF9F6;
   transition: background-color 0.3s;
 }
 .back-to-top:hover i {
-  color: #fefbff;
+  color: #FAF9F6;
 }
 
 .footer-icons a:hover i {
-  color: #01c2d4;
+  color: #104064;
   animation: translateY 0.8s infinite alternate;
 }
 
