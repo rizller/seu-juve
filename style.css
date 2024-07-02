@@ -139,6 +139,12 @@ i {
   margin: 0 auto;
   padding: 0 10px;
 }
+.container h1 {
+  font-family: "More Sugar";
+  font-weight: normal;
+  text-align: center;
+  font-size: 60px;
+}
 
 .bg-home {
   position: relative;
@@ -179,6 +185,9 @@ i {
 }
 
 /** ABOUT  **/
+.about {
+  color: #104064;
+}
 .about i {
   margin: 0;
 }
@@ -189,30 +198,26 @@ i {
   gap: 14px;
   padding: 34px 14px 64px 14px;
   overflow: hidden;
-  border: 1px red solid;
 }
 .about-content img {
   max-width: 570px;
   min-width: 350px;
 }
 
-.about-description h1 {
-  font-family: "More Sugar";
-  font-weight: normal;
-  color: #104064;
-  text-align: center;
-  font-size: 60px;
-}
 .about-description p {
   margin: 25px 0px 0px 0px;
   line-height: 150%;
   font-size: 20px;
   text-align: justify;
-  color: #104064;
 }
 
 /** END ABOUT **/
 /** BEGIN WHY QUIRO **/
+.our-services {
+  background-color: #104064;
+  color: #FAF9F6;
+}
+
 .our-services-and-testimony-content h2 {
   text-align: center;
   font-size: 30px;
@@ -221,6 +226,7 @@ i {
 .service-items {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
   gap: 16px;
   padding: 75px 44px 34px 44px;
@@ -233,7 +239,7 @@ i {
   align-items: center;
 }
 .service-item img {
-  width: 144px;
+  width: 164px;
   transition: transform 0.2s;
   min-height: 160px;
   -o-object-fit: cover;
