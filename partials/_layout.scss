@@ -62,67 +62,38 @@
 }
 
 .about-content{
-    display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 14px;
     padding: 34px 14px 64px 14px;
     overflow: hidden;
+    border: 1px red solid;
 
     img{
         max-width: 570px;
         min-width: 350px;
     }
+
 }
 
 
-.section-separator-down{
-    display: flex;
-    height: 80px;
-    width: 100%;
-    background-image: url("../assets/separator-section-down.png");
-    background-repeat: no-repeat; 
-    background-size: 100% 100%;
-    margin: 0 auto;
-}
 
-.section-separator-up{
-    display: flex;
-    height: 80px;
-    width: 100%;
-    background-image: url("../assets/separator-section-up.png");
-    background-repeat: no-repeat; 
-    background-size: 100% 100%;
-    margin: 0 auto;
-}
 
 .about-description{
+    h1{
+        font-family: "More Sugar";
+        font-weight: normal;
+        color: $dark-blue;
+        text-align: center;
+        font-size: 60px;
+    }
     p{
-        margin-bottom: 25px;
+        margin: 25px 0px 0px 0px;
         line-height: 150%;
         font-size: 20px;
         text-align: justify;
+        color: $dark-blue;
        }
-}
-
-.about-button{
-    border: 1px solid $white-normal;
-    line-height: 80px;
-    padding: 15px 50px;
-    border-radius: 30px;
-    color: $white-normal;
-    background-color: #00a884;
-    font-size: 18px;
-    transition: background-color 0.8s;//transição do hover para não mudar a cor do botão de uma vez
-}
-
-//muda a cor do botão quando passar mouse em cima
-.about-button:hover{
-    border: 1px solid #1ce7bc;
-    background-color: #1ce7bc;
-    color: $black-normal;   
-    -webkit-text-stroke-width: 0.1px; /* largura da borda */
-    -webkit-text-stroke-color: $black-normal; /* cor da borda */
 }
 
 
@@ -134,14 +105,14 @@
 
 /** BEGIN WHY QUIRO **/
 
-.why-quiro-and-testimony-content{
+.our-services-and-testimony-content{
     h2{
         text-align: center;
         font-size: 30px;
     }
 }
 
-.quiro-items{
+.service-items{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -150,7 +121,7 @@
     
 }
 
-.quiro-item{
+.service-item{
     flex: 1; //cada div tenta ocupar o tamanho igual na tela
     display: flex;
     flex-direction: column;
@@ -168,7 +139,8 @@
     }
 }
 
-.quiro-info{
+
+.service-info{
     margin-top: 20px;
     font-size: 19px;
 }
@@ -412,18 +384,18 @@
            }
     }
 
-    .why-quiro-and-testimony-content{
+    .our-services-and-testimony-content{
         h2{
             font-size: 25px;
         }
     }
 
-    .quiro-items{
+    .service-items{
         flex-direction: column;
         text-align: center;
     }
 
-    .quiro-item{
+    .service-item{
         img{
             width: 104px;
             min-height: 120px;
@@ -431,7 +403,7 @@
         }
     }
 
-    .quiro-info{
+    .service-info{
         font-size: 16px;
     }
 
