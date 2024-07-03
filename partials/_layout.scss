@@ -1,11 +1,10 @@
-
 //container de alinhamento do layout. Aonde usar essa classe, alinha o conteúdo. Mantém centralizado, independente do tamanho
-.container{
+.container {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 10px;
 
-    h1{
+    h1 {
         font-family: "More Sugar";
         font-weight: normal;
         text-align: center;
@@ -17,30 +16,30 @@
 
 //BG Home
 
-.bg-home{
+.bg-home {
     position: relative;
     overflow: hidden;
-    
+
 }
 
 //pseudo elemento, antes do nosso conteúdo
-.bg-home::before{
+.bg-home::before {
     content: '';
     display: block;
     position: absolute;
-    background-image:  url("../assets/bg.png");
-    left:0;
+    background-image: url("../assets/bg.png");
+    left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     z-index: -1; //fica uma camada abaixo dos elementos da tela
     background-size: cover; //tentar pegar o tamanho inteiro na tela, sem quebrar
-    background-repeat: no-repeat; 
-    background-position: 50% 0; 
-    
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+
 }
 
-.hero{
+.hero {
     font-family: "Suez One";
     color: $white-normal;
     min-height: 60vh; //60% do tamanho do view high.
@@ -49,33 +48,34 @@
     align-items: center;
     justify-content: center;
     padding: 14px;
-    h1{
+
+    h1 {
         text-align: center;
         line-height: 150%;
         max-width: 840px;
         font-size: 50px;
         font-weight: normal;
-        
+
     }
 }
 
 /** ABOUT  **/
-.about{
+.about {
     color: $dark-blue;
 }
 
-.about-content{
+.about-content {
     align-items: center;
     padding: 34px 14px 64px 14px;
 }
 
-.about-description{
-    p{
+.about-description {
+    p {
         margin: 25px 0px 0px 0px;
         line-height: 150%;
         font-size: 20px;
         text-align: justify;
-       }
+    }
 }
 
 
@@ -87,51 +87,51 @@
 
 /** BEGIN SERVICES **/
 
-.our-services{
+.our-services {
     background-color: $dark-blue;
     color: $white-light;
-    
+
 }
 
-.our-services-and-testimony-content{
-    h2{
+.our-services-and-testimony-content {
+    h2 {
         text-align: center;
         font-size: 30px;
     }
 }
 
-.service-items{
+.service-items {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     align-items: center;
     gap: 16px;
     padding: 75px 44px 64px 44px;
-    
+
 }
 
-.service-item{
+.service-item {
     flex: 1; //cada div tenta ocupar o tamanho igual na tela
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 50px 0px 0px 95px;
-    
-    img{
+
+    img {
         width: 164px;
         transition: transform 0.2s;
         min-height: 160px;
         object-fit: cover; // Adicionado para manter a proporção da imagem
     }
 
-    img:hover{
+    img:hover {
         transform: scale(1.2);
     }
 }
 
 
 
-.service-info{
+.service-info {
     margin-top: 20px;
     font-size: 19px;
 }
@@ -142,24 +142,27 @@
 
 
 /** BEGIN COME TO BE JUVE **/
-.come-to-be-juve{
+.come-to-be-juve {
     color: $dark-blue;
     padding: 20px 20px 50px 20px;
 }
 
-.come-to-be-juve-description{
+.come-to-be-juve-description {
 
     position: relative;
-    h2{
+
+    h2 {
         margin-top: 50px;
         margin-bottom: 15px;
         font-size: 17px;
     }
-    li{
+
+    li {
         font-size: 15px;
         margin: 20px 0px 0px 30px;
     }
-    p{
+
+    p {
         margin-top: 50px;
     }
 }
@@ -167,27 +170,29 @@
 .come-to-be-button-container {
     display: flex;
     justify-content: center;
-    margin-top: 50px; 
+    margin-top: 50px;
 }
 
 
-.come-to-be-button{
-    display: inline-block; 
+.come-to-be-button {
+    display: inline-block;
     line-height: 20px;
     padding: 15px 50px;
     border-radius: 30px;
     color: $white-normal;
     background-color: $dark-blue;
     font-size: 18px;
-    transition: background-color 0.8s;//transição do hover para não mudar a cor do botão de uma vez
+    transition: background-color 0.8s; //transição do hover para não mudar a cor do botão de uma vez
 }
 
-.come-to-be-button:hover{
+.come-to-be-button:hover {
     border: 1px solid $dark-blue;
     background-color: $white-normal;
-    color: $dark-blue;   
-    -webkit-text-stroke-width: 0.1px; /* largura da borda */
-    -webkit-text-stroke-color: $black-normal; /* cor da borda */
+    color: $dark-blue;
+    -webkit-text-stroke-width: 0.1px;
+    /* largura da borda */
+    -webkit-text-stroke-color: $black-normal;
+    /* cor da borda */
 }
 
 
@@ -195,21 +200,23 @@
 
 /** BEGIN TESTIMONY **/
 
-.stars{
+.stars {
     color: gold;
     line-height: 1;
 }
 
-.testimony{
+.testimony {
     background-color: $dark-blue;
     color: $white-light;
     padding-top: 30px;
 
 }
+
 .testimonial-content {
     display: flex;
     align-items: center;
 }
+
 .testimonial-content img {
     border-radius: 50%;
     width: 70px;
@@ -225,7 +232,7 @@
     padding: 80px 0px 80px 0px;
     min-height: 600px;
 
-    p{
+    p {
         padding-top: 30px;
     }
 }
@@ -238,7 +245,8 @@
 
 .testimonial-name {
     font-weight: bold;
-    margin: 0; /* Remove a margem superior e inferior */
+    margin: 0;
+    /* Remove a margem superior e inferior */
     line-height: 1;
 }
 
@@ -252,7 +260,8 @@
     order: 2;
 }
 
-.prev, .next {
+.prev,
+.next {
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -261,22 +270,23 @@
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     transition: color 0.8s;
     line-height: 50px;
-    
+
 }
 
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
     color: $dark-blue;
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
 .prev {
-     order: 1; 
-     padding-left:100px;
+    order: 1;
+    padding-left: 100px;
 }
 
-.next { 
-     order: 3; 
-     padding-right:100px;
+.next {
+    order: 3;
+    padding-right: 100px;
 }
 
 
@@ -285,6 +295,7 @@
         transform: rotateY(90deg);
         opacity: 0;
     }
+
     100% {
         transform: rotateY(0);
         opacity: 1;
@@ -299,7 +310,7 @@
 
 /** BEGIN COME TO MEET **/
 
-#map{
+#map {
     margin-top: 40px;
     border: 0;
 }
@@ -308,27 +319,63 @@
 
 /**BEGIN FOOTER **/
 
-.footer{
+.footer-content {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    padding: 24px 0; //54px em cima e embaixo e 0 na direita / esquerda
-    gap:24px;
-    color: $black-dark; 
- }
-.footer-logo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 250px;
+    width: 100%;
+    padding: 24px 0;
+    /* Espaçamento no topo e embaixo */
 }
 
-.footer-icons{
+.footer-sponsor {
+    display: flex;
+    flex-direction: column;
+    /* Força quebra de linha */
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.footer-sponsor h3 {
+    margin-bottom: 10px;
+    /* Espaçamento entre o texto e as imagens */
+}
+
+.sponsor-images {
+    display: flex;
+    align-items: center;
+}
+
+.sponsor-images img {
+    margin-right: 10px;
+    width: 100px;
+    height: auto;
+}
+
+.footer-logo img {
+    width: 200px;
+    height: auto;
+}
+
+.footer-icons {
     display: flex;
     gap: 14px;
-    padding-top: 20px;
+    font-size: 20px;
 }
+
+.footer-icons a i {
+    color: $dark-blue;
+}
+
+.footer p {
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 14px;
+}
+
+
+
+
 
 .back-to-top {
     position: fixed;
@@ -336,30 +383,35 @@
     right: 40px;
     z-index: 1000;
     font-size: 24px;
-    border: none;
+    border: 1px white solid;
     outline: none;
-    background-color: $white-normal; 
-    color: white;
+    background-color: $dark-blue;
+    color: $dark-blue;
     cursor: pointer;
     padding: 10px;
     border-radius: 4px;
-    opacity: 0;  /* inicialmente transparente */
-    visibility: hidden; /* inicialmente invisível */
-    transition: opacity 0.3s, visibility 0.3s, background-color 0.3s; /* combinação das transições */
+    opacity: 0;
+    /* inicialmente transparente */
+    visibility: hidden;
+    /* inicialmente invisível */
+    transition: opacity 0.3s, visibility 0.3s, background-color 0.3s;
+    /* combinação das transições */
 }
 
 .back-to-top:hover {
-    background-color: $dark-blue;
-    color: $white-light;
+    background-color: $white-light;
+    color: $dark-blue;
+    border: solid 1px $dark-blue;
     transition: background-color 0.3s;
-    i{
-        color:$white-light
+
+    i {
+        color: $dark-blue;
     }
 }
 
-.footer-icons a:hover{
-    i{
-        color:$dark-blue;
+.footer-icons a:hover {
+    i {
+        color: $dark-blue;
         animation: translateY 0.8s infinite alternate;
     }
 }
@@ -369,9 +421,10 @@
 
 /* Estilos para dispositivos tablets */
 @media (max-width: 1100px) {
-    .back-to-top{
+    .back-to-top {
         padding: 0px 8px 10px 8px;
-        i{
+
+        i {
             font-size: 30px;
         }
     }
@@ -379,57 +432,59 @@
 
 
 //formtação para celulares
-@media screen and (max-width: 768px){
-    .hero{
+@media screen and (max-width: 768px) {
+    .hero {
         min-height: 61.2vh;
-        h1{
+
+        h1 {
             font-size: 34px;
             padding: 0 14px;
             width: 100%;
         }
     }
 
-    .about-content{
+    .about-content {
         flex-direction: column;
         text-align: center;
 
-        img{
+        img {
             max-width: 320px;
             min-width: 250px;
         }
     }
 
-    .bg-home::before{
+    .bg-home::before {
         height: 70vh;
     }
 
-    .about-description{
-        p{
+    .about-description {
+        p {
             font-size: 18px;
-           }
+        }
     }
 
-    .our-services-and-testimony-content{
-        h2{
+    .our-services-and-testimony-content {
+        h2 {
             font-size: 25px;
         }
     }
 
-    .service-items{
+    .service-items {
         flex-direction: column;
         text-align: center;
     }
 
-    .service-item{
+    .service-item {
         margin: 40px 0px 0px 0px;
-        img{
+
+        img {
             width: 164px;
             min-height: 160px;
             object-fit: cover; // Adicionado para manter a proporção da imagem
         }
     }
 
-    .service-info{
+    .service-info {
         font-size: 16px;
     }
 
@@ -440,36 +495,52 @@
 
     }
 
-    .prev, .next {
+    .prev,
+    .next {
         font-size: 50px;
         line-height: 200px;
     }
-    
+
     .prev {
-        padding-left:5px;
-   }
-   
-   .next { 
-        padding-right:5px;
-   }
+        padding-left: 5px;
+    }
+
+    .next {
+        padding-right: 5px;
+    }
 
     .testimonial {
         padding: 30px 0px 30px 0px;
         min-height: 525px;
     }
-    .footer{
+
+    .footer {
         font-size: 14px;
         text-align: center;
-        
+
     }
 
-    .footer-logo{
+    .footer-logo {
         width: 200px;
     }
 
-    .back-to-top{
-        i{
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer-sponsor,
+    .footer-logo,
+    .footer-icons {
+        justify-content: center;
+        
+    }
+
+
+    .back-to-top {
+        i {
             font-size: 28px;
         }
     }
-} 
+}

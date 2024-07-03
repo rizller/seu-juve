@@ -289,8 +289,10 @@ i {
   border: 1px solid #104064;
   background-color: #FFF;
   color: #104064;
-  -webkit-text-stroke-width: 0.1px; /* largura da borda */
-  -webkit-text-stroke-color: #232224; /* cor da borda */
+  -webkit-text-stroke-width: 0.1px;
+  /* largura da borda */
+  -webkit-text-stroke-color: #232224;
+  /* cor da borda */
 }
 
 /** END COME TO BE JUVE ** /
@@ -339,7 +341,8 @@ i {
 
 .testimonial-name {
   font-weight: bold;
-  margin: 0; /* Remove a margem superior e inferior */
+  margin: 0;
+  /* Remove a margem superior e inferior */
   line-height: 1;
 }
 
@@ -351,7 +354,8 @@ i {
   order: 2;
 }
 
-.prev, .next {
+.prev,
+.next {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -362,7 +366,8 @@ i {
   line-height: 50px;
 }
 
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
   color: #104064;
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
@@ -400,27 +405,58 @@ i {
 
 /** END COME TO MEET **/
 /**BEGIN FOOTER **/
-.footer {
+.footer-content {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+  width: 100%;
   padding: 24px 0;
-  gap: 24px;
-  color: #161617;
+  /* Espaçamento no topo e embaixo */
 }
 
-.footer-logo {
+.footer-sponsor {
+  display: flex;
+  flex-direction: column;
+  /* Força quebra de linha */
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.footer-sponsor h3 {
+  margin-bottom: 10px;
+  /* Espaçamento entre o texto e as imagens */
+}
+
+.sponsor-images {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 250px;
+}
+
+.sponsor-images img {
+  margin-right: 10px;
+  width: 100px;
+  height: auto;
+}
+
+.footer-logo img {
+  width: 200px;
+  height: auto;
 }
 
 .footer-icons {
   display: flex;
   gap: 14px;
-  padding-top: 20px;
+  font-size: 20px;
+}
+
+.footer-icons a i {
+  color: #104064;
+}
+
+.footer p {
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 14px;
 }
 
 .back-to-top {
@@ -429,25 +465,29 @@ i {
   right: 40px;
   z-index: 1000;
   font-size: 24px;
-  border: none;
+  border: 1px white solid;
   outline: none;
-  background-color: #FFF;
-  color: white;
+  background-color: #104064;
+  color: #104064;
   cursor: pointer;
   padding: 10px;
   border-radius: 4px;
-  opacity: 0; /* inicialmente transparente */
-  visibility: hidden; /* inicialmente invisível */
-  transition: opacity 0.3s, visibility 0.3s, background-color 0.3s; /* combinação das transições */
+  opacity: 0;
+  /* inicialmente transparente */
+  visibility: hidden;
+  /* inicialmente invisível */
+  transition: opacity 0.3s, visibility 0.3s, background-color 0.3s;
+  /* combinação das transições */
 }
 
 .back-to-top:hover {
-  background-color: #104064;
-  color: #FAF9F6;
+  background-color: #FAF9F6;
+  color: #104064;
+  border: solid 1px #104064;
   transition: background-color 0.3s;
 }
 .back-to-top:hover i {
-  color: #FAF9F6;
+  color: #104064;
 }
 
 .footer-icons a:hover i {
@@ -512,7 +552,8 @@ i {
     line-height: 150%;
     padding: 0 20px 0 20px;
   }
-  .prev, .next {
+  .prev,
+  .next {
     font-size: 50px;
     line-height: 200px;
   }
@@ -532,6 +573,16 @@ i {
   }
   .footer-logo {
     width: 200px;
+  }
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .footer-sponsor,
+  .footer-logo,
+  .footer-icons {
+    justify-content: center;
   }
   .back-to-top i {
     font-size: 28px;
