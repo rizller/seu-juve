@@ -73,7 +73,7 @@
     p {
         margin: 25px 0px 0px 0px;
         line-height: 150%;
-        font-size: 20px;
+        font-size: 15px;
         text-align: justify;
     }
 }
@@ -370,6 +370,7 @@
 .footer p {
     text-align: center;
     padding-bottom: 20px;
+    margin-left: 140px;
     font-size: 14px;
 }
 
@@ -459,7 +460,7 @@
 
     .about-description {
         p {
-            font-size: 18px;
+            font-size: 15px;
         }
     }
 
@@ -517,6 +518,10 @@
     .footer {
         font-size: 14px;
         text-align: center;
+
+        p{
+            margin-left: 0px;
+        }
 
     }
 

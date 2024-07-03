@@ -197,7 +197,7 @@ i {
 .about-description p {
   margin: 25px 0px 0px 0px;
   line-height: 150%;
-  font-size: 20px;
+  font-size: 15px;
   text-align: justify;
 }
 
@@ -456,6 +456,7 @@ i {
 .footer p {
   text-align: center;
   padding-bottom: 20px;
+  margin-left: 140px;
   font-size: 14px;
 }
 
@@ -526,7 +527,7 @@ i {
     height: 70vh;
   }
   .about-description p {
-    font-size: 18px;
+    font-size: 15px;
   }
   .our-services-and-testimony-content h2 {
     font-size: 25px;
@@ -570,6 +571,9 @@ i {
   .footer {
     font-size: 14px;
     text-align: center;
+  }
+  .footer p {
+    margin-left: 0px;
   }
   .footer-logo {
     width: 200px;
