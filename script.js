@@ -1,28 +1,63 @@
 AOS.init();
 var testimonials = [
-    { stars: 5, text: "O Raone é simplesmente um profissional incrível. Completamente dedicado, comprometido, focado com o bem estar e com a qualidade de vida de seus pacientes. Um profissional versátil, além da quiropraxia, ele também nos trata com acupuntura, exercícios terapêuticos, massagem. Tenho fibromialgia, ou seja sofro de dor crônica. E trato com o Raone há alguns anos. E de verdade, saio de lá leve, as vezes tenho impressão que o Raone vem com as mãos de fada e tira minhas dores. Eu indico de olhos fechados o Raone, para qualquer pessoa que sofra de algum desconforto. Confio plenamente nesse super profissional, que sabe o que faz e não poupa esforços para que vc saia de sua clínica completamente sem nenhuma dor.", name: "Carla Noronha" },
-    { stars: 5, text: "Excelente!! Profissional eficiente, interessado na pessoa como um todo. Quando nos primeiros atendimentos, achei que estava precisando era de cirurgia, por causa de tantas dores que sentia na lombar e nos joelhos. Já havia feito vários tratamentos, sem melhora a longo prazo. Hoje estou muito bem. Recomendo a todos, conhecidos ou não, que sei que estão com dores e, todos foram bem atendidos e obtiveram resultados ótimos. Quiropraxia, acupuntura, e outros recursos maravilhosos que este profissional lança mão para tratar seus clientes/pacientes. Obrigada Raone Botelho por seu profissionalismo e dedicação.", name: "Edna Abranches" },
-    { stars: 5, text: "Experiência Maravilhosa! Tinha uma dor crônica que já estava desistindo de curar, oriunda de Jiu jitsu! Conheci o Raone por intermédio de um amigo e hoje indico para todos! Minha dor curou!!! Minha mobilidade voltou!!! Consegui corrigir minha postura!!! E hoje tenho uma vida extremamente melhor do que quando iniciei o processo! Agradeço a este profissional!!! E super indico!!!", name: "Glauber Fernandes" },
-    { stars: 5, text: "Minha experiência com o Raone foi excelente, tendo muito bom resultado que me tirou de uma crise da coluna lombar. Sou grata a ele pela atenção, disponibilidade, profissionalismo, competência e carinho!", name: "Aparecida Pinto e Netto" }
+    { 
+        stars: 5, 
+        image: "assets/testimonial-juliana.png", 
+        text: "O aplicativo Seu Juve salvou meu dia! Precisava de um encanador urgentemente e em poucos minutos encontrei um profissional qualificado. Ele resolveu o problema rapidamente e o preço foi justo. Estou muito satisfeita com o serviço e recomendo a todos que precisam de ajuda em casa. Antes do Seu Juve, sempre tinha dificuldades em encontrar bons profissionais e perdia muito tempo ligando para vários lugares. Agora, tudo ficou mais fácil e rápido. A praticidade que o aplicativo oferece é incomparável e a qualidade dos profissionais cadastrados é excelente. Vou continuar usando e recomendando!", 
+        name: "Juliana Costa" 
+    },
+    { 
+        stars: 5, 
+        image: "assets/testimonial-pedro.png", 
+        text: "Meu tempo é muito corrido e encontrar um eletricista de confiança sempre foi um desafio. Com o Seu Juve, consegui agendar um eletricista para consertar a fiação da minha casa em poucos minutos. O profissional foi super eficiente e educado. Não sei o que faria sem esse aplicativo! Além disso, a interface do aplicativo é muito intuitiva, facilitando o agendamento de serviços. Já utilizei o Seu Juve diversas vezes para diferentes tipos de serviços e sempre fui muito bem atendido. É um verdadeiro alívio saber que posso contar com profissionais competentes a qualquer hora do dia.", 
+        name: "Pedro Lima" 
+    },
+    { 
+        stars: 5, 
+        image: "assets/testimonial-mariana.png", 
+        text: "O Seu Juve realmente mudou minha vida! Eu precisava de alguém para fazer pequenos reparos em casa e sempre tinha dificuldade de encontrar alguém disponível. Agora, com o app, posso chamar um faz-tudo a qualquer hora e sempre sou atendida rapidamente. Recomendo muito! Os profissionais são sempre pontuais e realizam os serviços com muita qualidade. Já utilizei o aplicativo para serviços de encanamento, eletricidade e até mesmo para pequenos consertos. Não sei o que faria sem o Seu Juve. Ele trouxe muita tranquilidade e praticidade para o meu dia a dia.", 
+        name: "Mariana Silva" 
+    },
+    { 
+        stars: 5, 
+        image: "assets/testimonial-carlos.png", 
+        text: "Minha experiência com o Seu Juve foi incrível. Tive um problema sério com o encanamento e o aplicativo me conectou com um profissional excelente em questão de minutos. Ele chegou rápido e resolveu tudo com eficiência. Esse app realmente salva o dia a dia das pessoas! Além disso, o atendimento ao cliente é excelente, sempre prontos para ajudar em qualquer situação. Antes, era um transtorno encontrar alguém disponível e confiável para serviços de urgência, mas agora, com o Seu Juve, sei que posso contar com ajuda de qualidade a qualquer momento. É realmente um aplicativo indispensável.", 
+        name: "Carlos Mendes" 
+    },
+    { 
+        stars: 5, 
+        image: "assets/testimonial-ana.png", 
+        text: "Estou muito feliz com o aplicativo Seu Juve. Precisava de um eletricista e em poucos cliques encontrei um profissional disponível. Ele veio rápido e resolveu todos os meus problemas elétricos. Esse app é uma verdadeira mão na roda e já faz parte da minha vida! A qualidade dos serviços prestados é sempre alta e os profissionais são muito educados e prestativos. Já usei o Seu Juve para diferentes tipos de serviços e nunca me decepcionei. É um verdadeiro alívio saber que posso resolver qualquer problema doméstico com apenas alguns cliques. Recomendo para todos!", 
+        name: "Ana Oliveira" 
+    }
 ];
+
 var index = 0;
 
 function showTestimonial(i) {
     index = i;
-    if (index >= testimonials.length) {index = 0;}
-    if (index < 0) {index = testimonials.length-1;}
-    
-    const quoteElement = document.getElementById("quote");
-    quoteElement.classList.remove("flip-left-animation"); // Remove a classe
+    if (index >= testimonials.length) { index = 0; }
+    if (index < 0) { index = testimonials.length - 1; }
 
-    // Use um setTimeout para permitir que o navegador "respire" entre as remoções e adições de classes
+    const quoteElement = document.getElementById("quote");
+    quoteElement.classList.remove("flip-left-animation");
+
     setTimeout(() => {
         var stars = '';
         for (var j = 0; j < testimonials[index].stars; j++) {
             stars += '★';
         }
-        quoteElement.innerHTML = '<div class="stars">' + stars + '</div><br/>' + testimonials[index].text + '<br/><b>' + testimonials[index].name + '</b>';
-        quoteElement.classList.add("flip-left-animation"); // Adiciona a classe de animação
+        quoteElement.innerHTML = `
+            <div class="testimonial-content">
+                <img src="${testimonials[index].image}" alt="Testimonial Image">
+                <div class="testimonial-details">
+                    <div class="testimonial-name">${testimonials[index].name}</div>
+                    <div class="stars">${stars}</div>
+                </div>
+            </div>
+            <p>${testimonials[index].text}</p>
+        `;
+        quoteElement.classList.add("flip-left-animation");
     }, 20);
 }
 

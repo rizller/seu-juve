@@ -188,20 +188,10 @@ i {
 .about {
   color: #104064;
 }
-.about i {
-  margin: 0;
-}
 
 .about-content {
   align-items: center;
-  justify-content: space-between;
-  gap: 14px;
   padding: 34px 14px 64px 14px;
-  overflow: hidden;
-}
-.about-content img {
-  max-width: 570px;
-  min-width: 350px;
 }
 
 .about-description p {
@@ -212,7 +202,7 @@ i {
 }
 
 /** END ABOUT **/
-/** BEGIN WHY QUIRO **/
+/** BEGIN SERVICES **/
 .our-services {
   background-color: #104064;
   color: #FAF9F6;
@@ -229,7 +219,7 @@ i {
   flex-wrap: wrap;
   align-items: center;
   gap: 16px;
-  padding: 75px 44px 34px 44px;
+  padding: 75px 44px 64px 44px;
 }
 
 .service-item {
@@ -237,6 +227,7 @@ i {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 50px 0px 0px 95px;
 }
 .service-item img {
   width: 164px;
@@ -254,11 +245,79 @@ i {
   font-size: 19px;
 }
 
-/** END WHY QUIRO **/
+/** END SERVICES **/
+/** BEGIN COME TO BE JUVE **/
+.come-to-be-juve {
+  color: #104064;
+  padding: 20px 20px 50px 20px;
+}
+
+.come-to-be-juve-description {
+  position: relative;
+}
+.come-to-be-juve-description h2 {
+  margin-top: 50px;
+  margin-bottom: 15px;
+  font-size: 17px;
+}
+.come-to-be-juve-description li {
+  font-size: 15px;
+  margin: 20px 0px 0px 30px;
+}
+.come-to-be-juve-description p {
+  margin-top: 50px;
+}
+
+.come-to-be-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.come-to-be-button {
+  display: inline-block;
+  line-height: 20px;
+  padding: 15px 50px;
+  border-radius: 30px;
+  color: #FFF;
+  background-color: #104064;
+  font-size: 18px;
+  transition: background-color 0.8s;
+}
+
+.come-to-be-button:hover {
+  border: 1px solid #104064;
+  background-color: #FFF;
+  color: #104064;
+  -webkit-text-stroke-width: 0.1px; /* largura da borda */
+  -webkit-text-stroke-color: #232224; /* cor da borda */
+}
+
+/** END COME TO BE JUVE ** /
+
 /** BEGIN TESTIMONY **/
 .stars {
   color: gold;
-  text-align: center;
+  line-height: 1;
+}
+
+.testimony {
+  background-color: #104064;
+  color: #FAF9F6;
+  padding-top: 30px;
+}
+
+.testimonial-content {
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-content img {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  margin-right: 15px;
+  border: 3px white solid;
 }
 
 .testimonial {
@@ -267,6 +326,21 @@ i {
   align-items: center;
   padding: 80px 0px 80px 0px;
   min-height: 600px;
+}
+.testimonial p {
+  padding-top: 30px;
+}
+
+.testimonial-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.testimonial-name {
+  font-weight: bold;
+  margin: 0; /* Remove a margem superior e inferior */
+  line-height: 1;
 }
 
 .testimonial p {
@@ -382,49 +456,8 @@ i {
 }
 
 /**END FOOTER **/
-/** BEGIN BUTTON WHATS APP **/
-.btn-whatsapp {
-  position: fixed;
-  bottom: 84px;
-  right: 24px;
-  z-index: 99;
-  visibility: hidden;
-}
-.btn-whatsapp img {
-  max-width: 74px;
-  transition: transform 0.4s;
-}
-.btn-whatsapp img:hover {
-  transform: scale(1.1);
-}
-
-.btn-whatsapp .tooltip-text {
-  visibility: hidden;
-  position: absolute;
-  width: 120px;
-  top: 8px;
-  left: -144px;
-  background-color: #FFF;
-  color: #232224;
-  padding: 6px;
-  border: 1px solid black;
-  border-radius: 8px;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-
-.btn-whatsapp:hover .tooltip-text {
-  visibility: visible;
-  opacity: 1;
-}
-
-/**END BUTTON WHAT'S APP **/
 /* Estilos para dispositivos tablets */
 @media (max-width: 1100px) {
-  .btn-whatsapp {
-    bottom: 94px;
-  }
   .back-to-top {
     padding: 0px 8px 10px 8px;
   }
@@ -452,12 +485,6 @@ i {
   .bg-home::before {
     height: 70vh;
   }
-  .section-separator-down {
-    height: 90px;
-  }
-  .section-separator-up {
-    height: 90px;
-  }
   .about-description p {
     font-size: 18px;
   }
@@ -468,9 +495,12 @@ i {
     flex-direction: column;
     text-align: center;
   }
+  .service-item {
+    margin: 40px 0px 0px 0px;
+  }
   .service-item img {
-    width: 104px;
-    min-height: 120px;
+    width: 164px;
+    min-height: 160px;
     -o-object-fit: cover;
        object-fit: cover;
   }
@@ -505,12 +535,6 @@ i {
   }
   .back-to-top i {
     font-size: 28px;
-  }
-  .btn-whatsapp {
-    bottom: 84px;
-  }
-  .btn-whatsapp img {
-    max-width: 64px;
   }
 }
 body {
