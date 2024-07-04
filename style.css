@@ -587,18 +587,14 @@ i {
   .footer p {
     margin-left: 0px;
   }
+  .footer img {
+    width: 80px;
+  }
   .footer-logo {
     width: 200px;
   }
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-  .footer-sponsor,
-  .footer-logo,
-  .footer-icons {
-    justify-content: center;
+  .footer-logo img {
+    width: 120px;
   }
   .back-to-top i {
     font-size: 28px;
