@@ -22,10 +22,124 @@
 
 }
 
+.clean-service-content{
+    font-family: "Suez One";
+    color: $white-normal;
+    min-height: 40vh; //60% do tamanho do view high.
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+    font-weight: n;
 
-.clean-service{
+    h1 {
+        text-align: center;
+        line-height: 150%;
+        max-width: 840px;
+        font-size: 50px;
+        font-weight: normal;
+
+    }
+
     p{
-        font-weight: normal !important;
+        font-family: "Nurito";
+        font-size: 23px;
+        padding-top: 40px;
+        text-align: center        ;
     }
 }
+
+
+.clean-services {
+    color: $dark-blue;
+
+}
+
+
+
+.clean-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    padding: 75px 44px 64px 44px;
+
+}
+
+.clean-item {
+    flex: 1; //cada div tenta ocupar o tamanho igual na tela
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0px 0px 95px;
+
+    img {
+        width: 164px;
+        transition: transform 0.2s;
+        min-height: 160px;
+        object-fit: cover; // Adicionado para manter a proporção da imagem
+    }
+
+    img:hover {
+        transform: scale(1.2);
+    }
+}
+
+
+
+.service-info {
+    margin-top: 20px;
+    font-size: 19px;
+}
+
+.not-found-button{
+    display: inline-block;
+    line-height: 10px;
+    padding: 15px 50px;
+    border-radius: 30px;
+    color: $white-light;
+    background-color: $dark-blue;
+    font-size: 15px;
+    transition: background-color 0.8s; 
+    border: $white-light solid 1px;
+    margin: 10px 0 15px 0;
+}
+
+.not-found-button:hover {
+    border: 1px solid $dark-blue;
+    background-color: $white-light;
+    color: $dark-blue;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: $black-normal;
+}
+
+
+.not-found-service{
+    color: $white-light;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 10px;
+    background-color: $dark-blue;
+
+}
+
+.search-field{
+    
+    input{
+        width: 450px;
+        height: 35px;
+        border: solid 1px $dark-blue;
+        text-indent: 10px;
+        margin-top: 5px;
+    }
+}
+
+
+
 
