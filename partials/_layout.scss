@@ -8,7 +8,7 @@
         font-family: "More Sugar";
         font-weight: normal;
         text-align: center;
-        font-size: 60px;
+        font-size: 50px;
     }
 }
 
@@ -434,6 +434,25 @@
 
 //formtação para celulares
 @media screen and (max-width: 768px) {
+
+
+    .container{
+        h1{
+            font-size: 34px;
+        }
+        h2{
+            font-size: 15px;
+        }
+        p{
+            font-size: 14px;
+        }
+
+        ul, li{
+            font-size: 14px;
+        }
+        
+        
+    }
     .hero {
         min-height: 61.2vh;
 
@@ -480,7 +499,7 @@
 
         img {
             width: 164px;
-            min-height: 160px;
+            height: auto;
             object-fit: cover; // Adicionado para manter a proporção da imagem
         }
     }
