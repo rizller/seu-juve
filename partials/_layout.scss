@@ -319,13 +319,16 @@
 
 /**BEGIN FOOTER **/
 
+.footer{
+    color: $dark-blue;
+}
+
 .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     padding: 24px 0;
-    /* Espaçamento no topo e embaixo */
 }
 
 .footer-sponsor {
@@ -536,13 +539,17 @@
     .footer {
         font-size: 14px;
         text-align: center;
-
         p{
             margin-left: 0px;
+            font-size: 12px;
         }
 
         img{
             width: 80px;
+        }
+
+        h3{
+            font-size: 15px;
         }
 
     }
