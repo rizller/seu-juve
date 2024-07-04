@@ -435,10 +435,12 @@
 //formtação para celulares
 @media screen and (max-width: 768px) {
 
+    h1{
+        font-family: "More Sugar";
+    }
 
     .container{
         h1{
-            font-family: "More Sugar";
             font-size: 34px;
         }
         h2{
