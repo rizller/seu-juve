@@ -130,7 +130,6 @@
 }
 
 .search-field{
-    
     input{
         width: 450px;
         height: 35px;
@@ -140,6 +139,14 @@
     }
 }
 
+@media screen and (max-width: 768px) {
 
+
+    .search-field{
+        input{
+            width: 250px;
+        }
+    }
+}
 
 
