@@ -508,6 +508,7 @@ i {
 }
 @media screen and (max-width: 768px) {
   .container h1 {
+    font-family: "More Sugar";
     font-size: 34px;
   }
   .container h2 {
