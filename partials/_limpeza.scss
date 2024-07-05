@@ -207,6 +207,15 @@
     margin-top: 5px;
 }
 
+.map-icon {
+    position: absolute;
+    width: 40px; /* Ajuste o tamanho conforme necessário */
+    height: 40px; /* Ajuste o tamanho conforme necessário */
+    background: url('assets/person-icon.png') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+}
+
 .modal-header p {
     margin: 5px 0;
 }
