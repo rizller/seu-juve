@@ -173,8 +173,10 @@ backToTopButton.addEventListener('click', () => {
 function showMapSection() {
     var mapSection = document.getElementById("map-section");
     mapSection.style.display = "block";
-    mapSection.classList.add("aos-animate");
-    AOS.refreshHard();
+    setTimeout(function() {
+        mapSection.classList.add("aos-animate");
+        AOS.refresh();
+    }, 100); // Pequeno atraso para garantir que o display:block seja aplicado antes da animação
 }
 
 
