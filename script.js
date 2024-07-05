@@ -176,3 +176,19 @@ function showMapSection() {
     mapSection.classList.add("aos-animate");
     AOS.refreshHard();
 }
+
+
+function showModal(event, modalId) {
+    event.preventDefault();
+    document.getElementById(modalId).style.display = "block";
+}
+
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+        event.target.style.display = "none";
+    }
+}

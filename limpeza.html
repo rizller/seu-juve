@@ -101,10 +101,47 @@
         </div>
     </div>
     <section id="map-section" class="map-section" style="display: none;" data-aos="fade-up" data-aos-delay="150">
-        <div>
+        <div style="position: relative;">
             <img id="map" src="assets/map-initial.png" alt="Mapa dos Serviços de Limpeza" />
+            <!-- Ponto vermelho indicando onde clicar -->
+            <div id="red-dot" style="position: absolute; top: 30%; left: 45%; width: 20px; height: 20px; background-color: red; border-radius: 50%; cursor: pointer;" onclick="showModal(event, 'modal1')"></div>
         </div>
     </section>
+    
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <div class="modal-header">
+                <img src="assets/map-professional-1.png" alt="Professional Image">
+                <div class="modal-header-info">
+                    <div class="modal-header-top">
+                        <h2>Maycon Rodrigos Barbosa</h2>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p>Nota: 4,9 | 354 Atendimentos</p>
+                    <div class="chat-icon">
+                        <img src="assets/icon-chat-professional.png" alt="Chat Icon">
+                        <span>Converse com o profissional</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p><strong>Profissional:</strong> Maycon Rodrigos Barbosa</p>
+                <p><strong>Serviço:</strong> Limpeza de Estofados</p>
+                <p><strong>Orçamento:</strong> R$ 257,00</p>
+                <p><strong>Distância do profissional:</strong> 2,6km</p>
+                <p><strong>Tempo de Chegada Estimado:</strong> 10 minutos</p>
+            </div>
+            <div class="modal-footer">
+                <button class="primary">Solicitar Agora</button>
+                <button class="secondary">Agendar para mais tarde</button>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+
     <div id="footer-placeholder"></div>
     <script src="script.js"></script>
 </body>
