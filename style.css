@@ -144,8 +144,7 @@ i {
   padding: 0 10px;
 }
 .container h1 {
-  font-family: "More Sugar";
-  font-weight: normal;
+  font-family: "Comic Sans MS", cursive, sans-serif;
   text-align: center;
   font-size: 50px;
 }
@@ -208,6 +207,7 @@ i {
 /** END ABOUT **/
 /** BEGIN SERVICES **/
 .our-services {
+  padding-top: 30px;
   background-color: #104064;
   color: #FAF9F6;
 }
@@ -741,7 +741,7 @@ i {
 
 .map-section img {
   width: 100%;
-  max-width: 1400px;
+  max-width: 2000px;
   height: auto;
   margin: 0 auto;
   background-repeat: repeat-x;
