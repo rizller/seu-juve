@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WM1S6B0GBE"></script>
@@ -21,14 +20,12 @@
         integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=More+Sugar&display=swap" rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/css2?family=Suez+One:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <title>Seu Juve</title>
 </head>
-
 <body>
     <div id="header-placeholder"></div>
     <main class="bg-service" data-aos="fade-up" data-aos-delay="850" data-aos-duration="2000">
@@ -97,14 +94,18 @@
                 <input id="service-search" placeholder="Digite aqui o serviço que deseja..." />
             </div>
             <div>
-                <a class="not-found-button" href="#">
+                <a class="not-found-button"  href="#footer" onclick="showMapSection()">
                     Pesquisar
                 </a>
             </div>
         </div>
     </div>
+    <section id="map-section" class="map-section" style="display: none;" data-aos="fade-up" data-aos-delay="150">
+        <div>
+            <img src="assets/map-initial.png" alt="Mapa dos Serviços de Limpeza" />
+        </div>
+    </section>
     <div id="footer-placeholder"></div>
     <script src="script.js"></script>
 </body>
-
 </html>

@@ -139,6 +139,20 @@
     }
 }
 
+.map-section {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.map-section img {
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+    margin: 0 auto;
+    background-repeat: repeat-x;
+}
+
+
 @media screen and (max-width: 768px) {
 
 

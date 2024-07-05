@@ -169,3 +169,10 @@ backToTopButton.addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
+
+function showMapSection() {
+    var mapSection = document.getElementById("map-section");
+    mapSection.style.display = "block";
+    mapSection.classList.add("aos-animate");
+    AOS.refreshHard();
+}
