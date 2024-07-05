@@ -921,6 +921,9 @@ i {
   .search-field input {
     width: 250px;
   }
+  .modal-body {
+    font-size: 12px;
+  }
 }
 body {
   font-family: "Sora", sans-serif;
