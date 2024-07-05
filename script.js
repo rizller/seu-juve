@@ -170,27 +170,58 @@ backToTopButton.addEventListener('click', () => {
     });
 });
 
+var selectedService = '';
+
+function selectService(serviceName) {
+    selectedService = serviceName;
+    showMapSection();
+}
+
+function updateSearch() {
+    var searchInput = document.getElementById('service-search').value;
+    selectedService = searchInput;
+}
+
+var selectedService = '';
+
+function selectService(serviceName) {
+    selectedService = serviceName;
+    showMapSection();
+}
+
+function updateSearch() {
+    var searchInput = document.getElementById('service-search').value;
+    selectedService = searchInput;
+}
+
 function showMapSection() {
     var mapSection = document.getElementById("map-section");
     mapSection.style.display = "block";
-    setTimeout(function() {
-        mapSection.classList.add("aos-animate");
-        AOS.refresh();
-    }, 100); // Pequeno atraso para garantir que o display:block seja aplicado antes da animação
+    mapSection.classList.add("aos-animate");
+    AOS.refreshHard();
 }
 
-
-function showModal(event, modalId) {
-    event.preventDefault();
-    document.getElementById(modalId).style.display = "block";
+function showModal(event, modalId = 'modal1') {
+    var modal = document.getElementById(modalId);
+    var serviceDetailElement = document.getElementById('modal-service-detail');
+    if (serviceDetailElement) {
+        serviceDetailElement.textContent = selectedService;
+    }
+    modal.style.display = "block";
 }
 
 function closeModal(modalId) {
-    document.getElementById(modalId).style.display = "none";
+    var modal = document.getElementById(modalId);
+    modal.style.display = "none";
 }
 
-window.onclick = function(event) {
-    if (event.target.classList.contains('modal')) {
-        event.target.style.display = "none";
-    }
-}
+document.getElementById('service-search').addEventListener('input', updateSearch);
+
+// Exemplo de como vincular os botões para chamar selectService com o nome do serviço correto
+document.querySelectorAll('.service-item').forEach(function(item) {
+    item.addEventListener('click', function() {
+        var serviceName = item.querySelector('.service-info strong').textContent;
+        selectService(serviceName);
+    });
+});
+
