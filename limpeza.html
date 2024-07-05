@@ -37,7 +37,7 @@
 
     <section id="clean-services" class="clean-services">
         <section class="clean-items container">
-            <div class="service-item" data-aos="flip-left" data-aos-delay="100" data-aos-duration="1000" onclick="selectService('Limpeza Condomínio')">
+            <div class="service-item" data-aos="flip-left" data-aos-delay="100" data-aos-duration="1000" onclick="selectService('Limpeza Condomínio', 'R$ 300,00')">
                 <a href="#map">
                     <img src="assets/clean-condominio.png" alt="Condomínio" />
                 </a>    
@@ -45,7 +45,7 @@
                     <strong>Condomínio</strong>
                 </div>
             </div>
-            <div class="service-item" data-aos="flip-left" data-aos-delay="150" data-aos-duration="1000" onclick="selectService('Limpeza Residencial')">
+            <div class="service-item" data-aos="flip-left" data-aos-delay="150" data-aos-duration="1000" onclick="selectService('Limpeza Residencial', 'R$ 250,00')">
                 <a href="#map">
                     <img src="assets/clean-house.png" alt="Residencial" />
                 </a>    
@@ -53,7 +53,7 @@
                     <strong>Residencial</strong>
                 </div>
             </div>
-            <div class="service-item" data-aos="flip-left" data-aos-delay="200" data-aos-duration="1000" onclick="selectService('Limpeza Caixa D\'Água')">
+            <div class="service-item" data-aos="flip-left" data-aos-delay="200" data-aos-duration="1000" onclick="selectService('Limpeza Caixa D\'Água', 'R$ 180,00')">
                 <a href="#map">
                     <img src="assets/clean-caixa-agua.png" alt="Caixa D'Agua" />
                 </a>    
@@ -61,7 +61,7 @@
                     <strong>Caixa D'Água</strong>
                 </div>
             </div>
-            <div class="service-item" data-aos="flip-left" data-aos-delay="250" data-aos-duration="1000" onclick="selectService('Limpeza Caixa de Gordura')">
+            <div class="service-item" data-aos="flip-left" data-aos-delay="250" data-aos-duration="1000" onclick="selectService('Limpeza Caixa de Gordura', 'R$ 200,00')">
                 <a href="#map">
                     <img src="assets/clan-caixa-gordura.png" alt="Caixa de Gordura" />
                 </a>    
@@ -69,7 +69,7 @@
                     <strong>Caixa de Gordura</strong>
                 </div>
             </div>
-            <div class="service-item" data-aos="flip-left" data-aos-delay="250" data-aos-duration="1000" onclick="selectService('Limpeza Pós Obra')">
+            <div class="service-item" data-aos="flip-left" data-aos-delay="250" data-aos-duration="1000" onclick="selectService('Limpeza Pós Obra', 'R$ 350,00')">
                 <a href="#map">
                     <img src="assets/clean-obra.png" alt="Pós Obra" />
                 </a>    
@@ -77,7 +77,7 @@
                     <strong>Pós Obra</strong>
                 </div>
             </div>
-            <div class="service-item" data-aos="flip-left" data-aos-delay="250" data-aos-duration="1000" onclick="selectService('Limpeza Vidros')">
+            <div class="service-item" data-aos="flip-left" data-aos-delay="250" data-aos-duration="1000" onclick="selectService('Limpeza Vidros', 'R$ 150,00')">
                 <a href="#map">
                     <img src="assets/clean-vidro.png" alt="Vidros" />
                 </a>
@@ -85,7 +85,7 @@
                     <strong>Vidros</strong>
                 </div>
             </div>
-            <div class="service-item" data-aos="flip-left" data-aos-delay="250" data-aos-duration="1000" onclick="selectService('Limpeza Escritório')">
+            <div class="service-item" data-aos="flip-left" data-aos-delay="250" data-aos-duration="1000" onclick="selectService('Limpeza Escritório', 'R$ 270,00')">
                 <a href="#map">
                     <img src="assets/clean-escritorio.png" alt="Escritório" />
                 </a>
@@ -93,7 +93,7 @@
                     <strong>Escritório</strong>
                 </div>
             </div>
-            <div class="service-item" data-aos="flip-left" data-aos-delay="250" data-aos-duration="1000" onclick="selectService('Limpeza Estofados')">
+            <div class="service-item" data-aos="flip-left" data-aos-delay="250" data-aos-duration="1000" onclick="selectService('Limpeza Estofados', 'R$ 220,00')">
                 <a href="#map">
                     <img src="assets/clean-sofa.png" alt="Estofados" />
                 </a>
@@ -148,7 +148,7 @@
             <div class="modal-body">
                 <p><strong>Profissional:</strong> Maycon Rodrigos Barbosa</p>
                 <p><strong>Serviço:</strong> <span id="modal-service-detail">Limpeza de Estofados</span></p>
-                <p><strong>Orçamento:</strong> R$ 257,00</p>
+                <p><strong>Orçamento:</strong> <span id="modal-service-price">R$ 257,00</span></p>
                 <p><strong>Distância do profissional:</strong> 2,6km</p>
                 <p><strong>Tempo de Chegada Estimado:</strong> 10 minutos</p>
             </div>

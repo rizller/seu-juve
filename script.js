@@ -6,37 +6,30 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function includeHTML() {
     var z, i, elmnt, file, xhttp;
-    /* Loop through a collection of all HTML elements: */
     z = document.getElementsByTagName("*");
     for (i = 0; i < z.length; i++) {
         elmnt = z[i];
-        /*search for elements with a certain atrribute:*/
         file = elmnt.getAttribute("include-html");
         if (file) {
-            /* Make an HTTP request using the attribute value as the file name: */
             xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4) {
                     if (this.status == 200) {elmnt.innerHTML = this.responseText;}
                     if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                    /* Remove the attribute, and call this function once more: */
                     elmnt.removeAttribute("include-html");
                     includeHTML();
                 }
             } 
             xhttp.open("GET", file, true);
             xhttp.send();
-            /* Exit the function: */
             return;
         }
     }
 }
 
-// Carregar header e footer
 document.getElementById("header-placeholder").setAttribute("include-html", "header.html");
 document.getElementById("footer-placeholder").setAttribute("include-html", "footer.html");
 includeHTML();
-
 
 var testimonials = [
     { 
@@ -104,20 +97,17 @@ function changeSlide(n) {
     showTestimonial(index += n);
 }
 
-// Adicione esta função para iniciar o intervalo
 function startSlideShow() {
-    slideInterval = setInterval(function() { changeSlide(1); }, 8000); // Muda o slide a cada 8 segundos
+    slideInterval = setInterval(function() { changeSlide(1); }, 8000);
 }
 
-// Adicione esta função para parar o intervalo quando o usuário clicar nas setas
 function stopSlideShow() {
     clearInterval(slideInterval);
 }
 
 showTestimonial(0);
-startSlideShow(); // Inicia o slideshow quando a página é carregada
+startSlideShow();
 
-// Seção para lidar com eventos de toque
 var touchStartX = 0;
 var touchEndX = 0;
 
@@ -144,13 +134,11 @@ document.getElementById("quote").addEventListener('touchstart', handleTouchStart
 document.getElementById("quote").addEventListener('touchmove', handleTouchMove, false);
 document.getElementById("quote").addEventListener('touchend', handleTouchEnd, false);
 
-
-/**Button Back to the top */
 const backToTopButton = document.getElementById('backToTop');
 const btnWhatsapp = document.getElementById('btn-whatsapp');
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {  // Mostrar o botão após rolar 300px
+    if (window.scrollY > 300) {
         backToTopButton.style.opacity = '1';
         backToTopButton.style.visibility = 'visible';
         btnWhatsapp.style.opacity = '1';
@@ -171,28 +159,26 @@ backToTopButton.addEventListener('click', () => {
 });
 
 var selectedService = '';
+var selectedPrice = '';
 
-function selectService(serviceName) {
+function selectService(serviceName, servicePrice) {
     selectedService = serviceName;
+    selectedPrice = servicePrice;
     showMapSection();
 }
 
 function updateSearch() {
     var searchInput = document.getElementById('service-search').value;
     selectedService = searchInput;
+    selectedPrice = 'R$ 150,00'; // Default price for search input
 }
 
-var selectedService = '';
-
-function selectService(serviceName) {
-    selectedService = serviceName;
+// Update the event listener for the search button
+document.querySelector('.not-found-button').addEventListener('click', function() {
+    updateSearch();
     showMapSection();
-}
+});
 
-function updateSearch() {
-    var searchInput = document.getElementById('service-search').value;
-    selectedService = searchInput;
-}
 
 function showMapSection() {
     var mapSection = document.getElementById("map-section");
@@ -204,8 +190,12 @@ function showMapSection() {
 function showModal(event, modalId = 'modal1') {
     var modal = document.getElementById(modalId);
     var serviceDetailElement = document.getElementById('modal-service-detail');
+    var servicePriceElement = document.getElementById('modal-service-price');
     if (serviceDetailElement) {
         serviceDetailElement.textContent = selectedService;
+    }
+    if (servicePriceElement) {
+        servicePriceElement.textContent = selectedPrice;
     }
     modal.style.display = "block";
 }
@@ -217,11 +207,10 @@ function closeModal(modalId) {
 
 document.getElementById('service-search').addEventListener('input', updateSearch);
 
-// Exemplo de como vincular os botões para chamar selectService com o nome do serviço correto
 document.querySelectorAll('.service-item').forEach(function(item) {
     item.addEventListener('click', function() {
         var serviceName = item.querySelector('.service-info strong').textContent;
-        selectService(serviceName);
+        var servicePrice = item.getAttribute('data-price');
+        selectService(serviceName, servicePrice);
     });
 });
-
