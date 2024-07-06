@@ -198,11 +198,17 @@ function showModal(event, modalId = 'modal1') {
         servicePriceElement.textContent = selectedPrice;
     }
     modal.style.display = "block";
+    setTimeout(function() {
+        modal.classList.add('show');
+    }, 100); // Small delay to allow CSS transition to take effect
 }
 
 function closeModal(modalId) {
     var modal = document.getElementById(modalId);
-    modal.style.display = "none";
+    modal.classList.remove('show');
+    setTimeout(function() {
+        modal.style.display = "none";
+    }, 100); // Match the transition duration
 }
 
 document.getElementById('service-search').addEventListener('input', updateSearch);

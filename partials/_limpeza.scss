@@ -146,6 +146,13 @@
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
     padding-top: 60px;
+    opacity: 0; /* Initial state for animation */
+    transition: opacity 0.5s ease; /* Animation effect */
+}
+
+.modal.show {
+    display: block;
+    opacity: 1; /* Final state for animation */
 }
 
 .modal-content {
@@ -160,6 +167,7 @@
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     position: relative;
 }
+
 
 .close {
     color: #aaa;
